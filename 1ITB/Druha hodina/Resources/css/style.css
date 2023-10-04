@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-color: rgba(0,0,0, 0.3);
+    width: 50vw;
+    height: 50vh;
+    color: white;
+    margin: auto;
+    margin-top: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.header h1{
+    color: green;
+    text-align: center;
+    margin: 10px;
+}
+.menu{
+    width: 100%;
+    height: 80%;
+    background-color: aqua;
+}
+.menu ul{
+    list-style: none;
+}
+.menu li{
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+}
