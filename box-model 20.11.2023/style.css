@@ -20,7 +20,7 @@ body {
 }
 
 .images img {
-    width: 100%;
+    width: 100%; 
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
