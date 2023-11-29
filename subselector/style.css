@@ -1,0 +1,49 @@
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+td.format2{
+    border: 1px solid black;
+}
+h1{
+    font-size: 5em;
+}
+header h1{
+    font-size: 2em;
+    color: yellow;
+}
+header h1::before{
+    content: "Lorem ipsum";
+}
+header h1::after{
+    content: "sample text";
+}
+header h1:hover {
+    color: rosybrown;
+}
+
+td:first-child {
+    border-color: red;
+}
+
+td:nth-child(2) {
+    border-color: red;
+}
+
+td:last-child {
+    border-color: red;
+}
+a[target=_blank]{
+    background-color: red;
+}
+.a1, .a2, .a3{
+    background-color: rgb(83,69,82);
+}
+.okno{
+    width: 80vw;
+    height: 200px;
+    min-width: 400px;
+    max-width: 1000px;
+    background-color: rgb(10,20,110);
+}
