@@ -1,49 +1,31 @@
-td {
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
-}
-td.format2{
-    border: 1px solid black;
-}
-h1{
-    font-size: 5em;
-}
-header h1{
-    font-size: 2em;
-    color: yellow;
-}
-header h1::before{
-    content: "Lorem ipsum";
-}
-header h1::after{
-    content: "sample text";
-}
-header h1:hover {
-    color: rosybrown;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-td:first-child {
-    border-color: red;
+.table-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-td:nth-child(2) {
-    border-color: red;
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-td:last-child {
-    border-color: red;
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
-a[target=_blank]{
-    background-color: red;
+
+.data-table th {
+    background-color: #f2f2f2;
 }
-.a1, .a2, .a3{
-    background-color: rgb(83,69,82);
-}
-.okno{
-    width: 80vw;
-    height: 200px;
-    min-width: 400px;
-    max-width: 1000px;
-    background-color: rgb(10,20,110);
-}
+        
