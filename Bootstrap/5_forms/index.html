@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/__Bootstrap lib/css/bootstrap.css">
+    <title>Forms bootstrap</title>
+</head>
+<body>
+        <!-- udělej sekci, kde bude jméno, email, heslo a odeslat -->
+        <form action="#" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Jméno a příjmení:</label>
+                <input type="text" name="" id="name" class="form-control" aria-describedby="nameDesc" placeholder="Miroslav Douda">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" name="" id="email" class="form-control" aria-describedby="emailDesc" placeholder="miroslavdouda@spsul.cz">
+                <div id="emailDesc" class="form-text">
+                    We'll never share your email with anyone else.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label form-control-sm">Heslo:</label>
+                <input type="password" name="" id="pwd" class="form-control form-control-sm" aria-describedby="password">
+                <div id="password" class="form-text">
+                    Password must be 8 characters long and have at least one number.
+                </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" name="" id="bipolar" class="form-check-input">
+                <label for="bipolar" class="form-check-label">Jsem bipolární</label>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Odeslat" disabled>
+            </div>
+        </form>
+        <!-- grid system form control-->
+        <form action="#" method="post">
+            <div class="row g-4 align-items-center">
+                <div class="col-auto">
+                    <label for="pwd" class="col-form-label">Password:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" name="" id="pwd" class="form-control" placeholder="********">
+                </div>
+                <div class="col-auto">
+                    <span class="form-text">
+                        Must be 8-20 characters long.
+                    </span>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Odeslat</button>
+                </div>
+            </div>
+            <!-- form control for files -->
+            <div class="row g-3 align-items-center">
+                <div class="mb-3 col-auto">
+                    <label for="fileInput" class="form-label">Enter your files.</label>
+                    <input type="file" name="" id="fileInput" class="form-control">
+                </div>
+            </div>
+        </form>
+
+    </body>
+</html>
