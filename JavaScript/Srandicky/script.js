@@ -1,0 +1,23 @@
+const zaci1ITB = [
+    "Bažant Adam",
+    "Bělotel Alexandr",
+    "Beneš František",
+    "Bílek Patrik",
+    "Blot Alex",
+    "Cvejn Antonín",
+    "Černík Lukáš",
+    "Feshchuk Anhelina",
+    "Hetzendorf Petr",
+    "Liška Čeněk",
+    "Malý Vilém",
+    "Martykán Jakub",
+    "Mazáč Matěj",
+    "Pospíšil Samuel",
+    "Skeť Ivan",
+    "Strachoň Josef",
+    "Svoboda Lukáš",
+    "Špatenka Jakub",
+    "Vojtěch Matěj",
+    "Voves Jan",
+    "Zdvořák Andrej"
+]
