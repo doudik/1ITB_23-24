@@ -21,3 +21,21 @@ const zaci1ITB = [
     "Voves Jan",
     "Zdvořák Andrej"
 ]
+let text = document.querySelector(".circle-text");
+const sleep = (ms = 0) => new Promise(resolve => setTimeout(resolve, ms));
+
+function GetRandomName(){
+    const randomName = zaci1ITB[Math.floor(Math.random() * zaci1ITB.length)];
+    return randomName;
+}
+function NumberOfSpins(){
+    const randomNumber = Math.floor(Math.random() * zaci1ITB.length);
+    return randomNumber;
+}
+async function Spin(){
+    for(let i = 0; i < NumberOfSpins(); i++){
+        text.innerHTML = GetRandomName(); 
+        await sleep(1000);
+    }
+
+}
