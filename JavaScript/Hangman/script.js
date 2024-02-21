@@ -100,3 +100,29 @@ const slova = [
   "stylce",
   "okrašlovat",
 ];
+
+let slovo = slova[Math.floor(Math.random() * slova.length)];
+let slovoArray = slovo.split("");
+
+function createWord(){
+    let container = document.querySelector(".container-slovo");
+    for (let i = 0; i < slovoArray.length; i++){
+        let button = document.createElement("button");
+        button.classList.add("btn");
+        button.classList.add("btn-primary");
+        button.style.margin = "2px";
+        button.innerHTML = slovoArray[i];
+        container.appendChild(button);
+        
+        button.onclick = checkValue;
+    } 
+}
+function checkValue(){
+    slovoArray.forEach(element => {
+        if(element == this.innerHTML){
+            this.style.backgroundColor = "green";
+            this.disabled = true;
+        }
+    });
+}
+
