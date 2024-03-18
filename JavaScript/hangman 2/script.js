@@ -104,14 +104,13 @@ const ceskaAbeceda = ['A', 'Á', 'B', 'C', 'Č', 'D', 'Ď', 'E', 'É', 'Ě', 'F'
 let randomPhrase = slova[Math.floor(Math.random() * slova.length)];
 let dashesList = document.querySelector(".listDashes");
 let buttonList = document.querySelector(".buttons");
+let guessingPhrase = [];
 
 GenerateDashes();
 GenerateButtons();
 
 function GenerateDashes(){
     // generated dashes to array
-    let guessingPhrase = [];
-
     for(let i = 0; i < randomPhrase.length; i++){
         guessingPhrase.push("_");
     }
@@ -128,7 +127,34 @@ function GenerateButtons(){
         let button = document.createElement("button");
         button.innerHTML = ceskaAbeceda[i];
         button.classList.add("btn", "btn-primary");
+        button.onclick = () => {
+            CheckWord(button);
+        }
         buttonList.appendChild(button);
     }
 }
+function CheckWord(button){
+    let pressedChar = button.innerHTML;
+    for(let i = 0; i < randomPhrase.length; i++){
+        CheckCorrectLetter(pressedChar, i, button); //validation
+    }
+    UpdateDashes();
+}
+function CheckCorrectLetter(pressedChar, i, button){
+    let valid = false;
 
+    if(randomPhrase[i] == pressedChar.toLowerCase()){
+        guessingPhrase[i] = pressedChar;
+        valid = true;
+    }
+    UpdateColorOfButton(button, valid);
+}
+function UpdateColorOfButton(button){
+    //update!!
+}
+function UpdateDashes(){
+    let liList = document.querySelectorAll("li");
+    for(let i = 0; i < guessingPhrase.length; i++){
+        liList[i].innerHTML = guessingPhrase[i];
+    }
+}
