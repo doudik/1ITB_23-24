@@ -135,22 +135,28 @@ function GenerateButtons(){
 }
 function CheckWord(button){
     let pressedChar = button.innerHTML;
-    for(let i = 0; i < randomPhrase.length; i++){
-        CheckCorrectLetter(pressedChar, i, button); //validation
-    }
-    UpdateDashes();
-}
-function CheckCorrectLetter(pressedChar, i, button){
     let valid = false;
 
-    if(randomPhrase[i] == pressedChar.toLowerCase()){
-        guessingPhrase[i] = pressedChar;
-        valid = true;
+    for(let i = 0; i < randomPhrase.length; i++){
+        if(randomPhrase[i] == pressedChar.toLowerCase()){
+            guessingPhrase[i] = pressedChar;
+            contains = true; //TODO remake, calling so many times
+        }
     }
-    UpdateColorOfButton(button, valid);
+    UpdateDashes();
+    UpdateColorOfButton(button, );
 }
-function UpdateColorOfButton(button){
+
+
+function UpdateColorOfButton(button, valid){
     //update!!
+    console.log(valid);
+    if(valid){
+        button.style.backgroundColor = "green";
+    }else{
+        button.style.backgroundColor = "red";
+    }
+    button.disabled = true;
 }
 function UpdateDashes(){
     let liList = document.querySelectorAll("li");
