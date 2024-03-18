@@ -140,17 +140,14 @@ function CheckWord(button){
     for(let i = 0; i < randomPhrase.length; i++){
         if(randomPhrase[i] == pressedChar.toLowerCase()){
             guessingPhrase[i] = pressedChar;
-            contains = true; //TODO remake, calling so many times
+            valid = true; //TODO remake, calling so many times
         }
     }
     UpdateDashes();
-    UpdateColorOfButton(button, );
+    UpdateColorOfButton(button, valid);
 }
-
-
 function UpdateColorOfButton(button, valid){
     //update!!
-    console.log(valid);
     if(valid){
         button.style.backgroundColor = "green";
     }else{
