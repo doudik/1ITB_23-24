@@ -57,6 +57,10 @@ function createCar(){
 }
 
 function updateList(){
+    let container = document.getElementById("container");
+
+    
+    
     autaVeVyrobe.forEach(car => {
         setInterval(() => {
             car.delkaVyroby--;
