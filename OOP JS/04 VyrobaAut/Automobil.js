@@ -58,6 +58,18 @@ function createCar(){
 
 function updateList(){
     let container = document.getElementById("container");
+    container.innerHTML = ""; //vyprázdníme obsah
+
+    autaVeVyrobe.forEach(car => {
+        let div = document.createElement("div");
+        div.innerHTML = `
+            <h2>${car.znacka} - ${car.model}</h2>
+            <p>Rok výroby: ${car.rokVyroby}</p>
+            <p>Cena: ${car.cena} Kč</p>
+            <p>Délka výroby: ${car.delkaVyroby} dní
+        `;
+        container.appendChild(div);
+    });
 
     
     
