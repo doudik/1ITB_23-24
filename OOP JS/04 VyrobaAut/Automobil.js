@@ -70,9 +70,12 @@ function updateList(){
         `;
         container.appendChild(div);
     });
+    if(autaVeVyrobe.length > 0){
+        startProduction();
+    }
+}
 
-    
-    
+function startProduction(){
     autaVeVyrobe.forEach(car => {
         setInterval(() => {
             car.delkaVyroby--;
@@ -80,4 +83,5 @@ function updateList(){
                 autaVeVyrobe.splice(autaVeVyrobe.indexOf(car), 1);
             }
     }, 1000);
-    })};
+    });
+}
